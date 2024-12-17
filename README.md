@@ -21,8 +21,7 @@ Follow these steps to set up the project on your local machine:
 1. **Clone the Repository**  
    Clone the project from the repository using the following command:
    ```bash
-   git clone https://github.com/your-repo/project-management.git
-   cd project-management
+   cd project-management-app
    ```
 
 2. **Create a Virtual Environment**  
