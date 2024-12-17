@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ title }}{% endblock title %}
+{% block main-content %}
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-8 offset-sm-2">
+            <h3>{{ title }}</h3>
+            <hr>
+            <ul>
+                {% for task in tasks %}
+                    <li><a href="{% url 'task-detail' pk=task.id %}">{{ task.title }}</a> &nbsp &nbsp {{ task.status }}</li>
+                {% empty %}
+                    <li>No tasks available.</li>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'task-create' %}" class="btn btn-primary mt-3">Create New Task</a>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}
